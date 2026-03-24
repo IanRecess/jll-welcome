@@ -4,275 +4,318 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Recess | JLL Partners</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            color: #1a1a1a;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #1e293b;
             background: #ffffff;
             line-height: 1.6;
         }
 
         .hero {
             text-align: center;
-            padding: 60px 24px 40px;
-            background: linear-gradient(135deg, #f8fffe 0%, #eef9f6 100%);
-            border-bottom: 1px solid #e0f0eb;
+            padding: 64px 24px 48px;
+            background: #0f172a;
+            color: white;
         }
 
         .logos {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 24px;
-            margin-bottom: 32px;
+            gap: 20px;
+            margin-bottom: 36px;
         }
 
         .logos img {
-            height: 40px;
+            height: 36px;
         }
 
         .logos .divider {
-            width: 1px;
-            height: 32px;
-            background: #ccc;
+            font-size: 24px;
+            color: rgba(255,255,255,0.3);
+            font-weight: 300;
         }
 
         .hero h1 {
-            font-size: 32px;
+            font-size: 36px;
             font-weight: 700;
-            margin-bottom: 12px;
-            color: #1a1a1a;
+            margin-bottom: 16px;
+            color: #ffffff;
+            letter-spacing: -0.5px;
         }
 
         .hero p {
             font-size: 18px;
-            color: #555;
-            max-width: 600px;
-            margin: 0 auto 8px;
+            color: rgba(255,255,255,0.75);
+            max-width: 580px;
+            margin: 0 auto 24px;
+            line-height: 1.7;
         }
 
         .trust-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: #fff;
-            border: 1px solid #d4ece4;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
             border-radius: 24px;
             padding: 8px 20px;
-            margin-top: 20px;
-            font-size: 14px;
-            color: #2a7d5f;
+            font-size: 13px;
+            color: rgba(255,255,255,0.9);
+            font-weight: 500;
         }
 
         .trust-badge svg {
             width: 16px;
             height: 16px;
-            fill: #2a7d5f;
+            fill: #4ade80;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 780px;
             margin: 0 auto;
-            padding: 48px 24px;
+            padding: 56px 24px;
         }
 
         .section {
-            margin-bottom: 48px;
+            margin-bottom: 56px;
         }
 
         .section h2 {
-            font-size: 22px;
-            font-weight: 600;
-            margin-bottom: 16px;
-            color: #1a1a1a;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #0f172a;
+            letter-spacing: -0.3px;
         }
 
         .section p {
             font-size: 16px;
-            color: #555;
+            color: #64748b;
             margin-bottom: 16px;
         }
 
         .video-placeholder {
             width: 100%;
             aspect-ratio: 16/9;
-            background: #f5f5f5;
-            border-radius: 12px;
-            border: 2px dashed #ddd;
+            background: #f8fafc;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #999;
-            font-size: 18px;
+            color: #94a3b8;
+            font-size: 16px;
             margin-bottom: 12px;
         }
 
-        .video-placeholder svg {
-            width: 48px;
-            height: 48px;
-            fill: #ccc;
-            margin-bottom: 8px;
+        .video-placeholder .play-icon {
+            width: 64px;
+            height: 64px;
+            background: #0f172a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+        }
+
+        .video-placeholder .play-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+            margin-left: 3px;
         }
 
         .steps {
             display: grid;
-            gap: 20px;
+            gap: 16px;
         }
 
         .step {
             display: flex;
             gap: 16px;
             align-items: flex-start;
-            padding: 20px;
-            background: #fafafa;
+            padding: 24px;
+            background: #f8fafc;
             border-radius: 12px;
-            border: 1px solid #eee;
+            border: 1px solid #e2e8f0;
+            transition: border-color 0.2s;
+        }
+
+        .step:hover {
+            border-color: #cbd5e1;
         }
 
         .step-number {
             width: 36px;
             height: 36px;
             min-width: 36px;
-            background: #2bbaa0;
+            background: #0f172a;
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 700;
-            font-size: 16px;
+            font-size: 15px;
         }
 
         .step-content h3 {
             font-size: 16px;
             font-weight: 600;
             margin-bottom: 4px;
+            color: #0f172a;
         }
 
         .step-content p {
             font-size: 14px;
-            color: #666;
+            color: #64748b;
             margin: 0;
+            line-height: 1.5;
         }
 
         .cta-section {
             text-align: center;
-            padding: 48px 24px;
-            background: #f8fffe;
-            border-top: 1px solid #e0f0eb;
+            padding: 56px 24px;
+            background: #f8fafc;
+            border-top: 1px solid #e2e8f0;
         }
 
         .cta-section h2 {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: 700;
             margin-bottom: 12px;
+            color: #0f172a;
         }
 
         .cta-section p {
             font-size: 16px;
-            color: #555;
-            margin-bottom: 24px;
+            color: #64748b;
+            margin-bottom: 28px;
         }
 
         .btn-primary {
             display: inline-block;
-            background: #2bbaa0;
+            background: #0f172a;
             color: white;
-            padding: 16px 40px;
-            border-radius: 8px;
+            padding: 16px 44px;
+            border-radius: 10px;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
-            transition: background 0.2s;
+            transition: all 0.2s;
+            letter-spacing: -0.2px;
         }
 
         .btn-primary:hover {
-            background: #24a08a;
+            background: #1e293b;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
         }
 
         .btn-secondary {
             display: inline-block;
             background: white;
-            color: #2bbaa0;
+            color: #0f172a;
             padding: 12px 28px;
-            border-radius: 8px;
+            border-radius: 10px;
             text-decoration: none;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 600;
-            border: 2px solid #2bbaa0;
+            border: 1.5px solid #cbd5e1;
             margin-top: 12px;
-            transition: background 0.2s;
+            transition: all 0.2s;
         }
 
         .btn-secondary:hover {
-            background: #f0faf7;
+            border-color: #94a3b8;
+            background: #f8fafc;
         }
 
         .brands {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 10px;
             justify-content: center;
             margin-top: 16px;
         }
 
         .brand-tag {
-            background: #fff;
-            border: 1px solid #e0e0e0;
-            border-radius: 20px;
-            padding: 6px 16px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 8px 16px;
             font-size: 13px;
-            color: #555;
+            font-weight: 500;
+            color: #475569;
         }
 
         .footer {
             text-align: center;
-            padding: 32px 24px;
-            color: #999;
+            padding: 36px 24px;
+            color: #94a3b8;
             font-size: 13px;
+            border-top: 1px solid #f1f5f9;
         }
 
         .footer a {
-            color: #2bbaa0;
+            color: #475569;
             text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer a:hover {
+            color: #0f172a;
         }
 
         .how-it-works {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 24px;
-            margin-top: 16px;
+            margin-top: 20px;
         }
 
         .how-card {
             text-align: center;
-            padding: 24px 16px;
+            padding: 28px 16px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
         }
 
         .how-card .icon {
-            font-size: 32px;
-            margin-bottom: 12px;
+            font-size: 28px;
+            margin-bottom: 14px;
         }
 
         .how-card h3 {
             font-size: 15px;
             font-weight: 600;
             margin-bottom: 6px;
+            color: #0f172a;
         }
 
         .how-card p {
             font-size: 13px;
-            color: #777;
+            color: #64748b;
             margin: 0;
+            line-height: 1.5;
         }
 
         @media (max-width: 640px) {
-            .hero h1 { font-size: 24px; }
-            .how-it-works { grid-template-columns: 1fr; }
-            .logos { flex-direction: column; gap: 12px; }
-            .logos .divider { width: 32px; height: 1px; }
+            .hero { padding: 48px 20px 36px; }
+            .hero h1 { font-size: 28px; }
+            .hero p { font-size: 16px; }
+            .how-it-works { grid-template-columns: 1fr; gap: 12px; }
+            .logos { gap: 16px; }
+            .logos img { height: 28px; }
+            .cta-section h2 { font-size: 24px; }
         }
     </style>
 </head>
@@ -280,19 +323,15 @@
 
     <div class="hero">
         <div class="logos">
-            <svg height="40" viewBox="0 0 120 40" fill="none">
-                <text x="0" y="30" font-family="Arial" font-weight="bold" font-size="28" fill="#2bbaa0">recess</text>
-            </svg>
-            <div class="divider"></div>
-            <svg height="40" viewBox="0 0 60 40" fill="none">
-                <text x="0" y="30" font-family="Arial" font-weight="bold" font-size="28" fill="#e41d13">JLL</text>
-            </svg>
+            <img src="https://cdn.prod.website-files.com/64ff2fd4c0c0c110f9ca6543/64ff74900e799e5bd71e5bca_recess.svg" alt="Recess logo" style="filter: brightness(0) invert(1); height: 32px;">
+            <span class="divider">+</span>
+            <img src="https://logotyp.us/file/jll.svg" alt="JLL logo" style="filter: brightness(0) invert(1); height: 28px;">
         </div>
         <h1>Welcome, JLL Partners</h1>
         <p>Recess connects your properties with premium brands that want to reach your residents. Your properties get paid, your residents get free products, and you do nothing.</p>
         <div class="trust-badge">
             <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-            Trusted JLL partner since 2025
+            Verified JLL partner
         </div>
     </div>
 
@@ -323,11 +362,13 @@
             <h2>Watch: Getting Started (2 min)</h2>
             <div class="video-placeholder">
                 <div style="text-align: center;">
-                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    <div class="play-icon">
+                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
                     <div>Video coming soon</div>
                 </div>
             </div>
-            <p style="font-size: 14px; color: #888;">A quick walkthrough of the signup and onboarding process.</p>
+            <p style="font-size: 14px; color: #94a3b8;">A quick walkthrough of the signup and onboarding process.</p>
         </div>
 
         <div class="section">

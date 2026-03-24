@@ -1,0 +1,32 @@
+{
+  "_version": "2.0",
+  "_description": "Infrastructure state tracking - prevents duplicate deployments",
+  "project": {
+    "name": null,
+    "rootPath": null
+  },
+  "github": {
+    "connected": false,
+    "repoUrl": null,
+    "remoteName": "origin",
+    "lastPush": "2026-03-24T16:25:23.136531+00:00",
+    "defaultBranch": "main"
+  },
+  "git": {
+    "currentBranch": null,
+    "lastCommit": null,
+    "lastCommitMessage": null
+  },
+  "gcp": {
+    "projectId": null,
+    "defaultRegion": null,
+    "cloudRun": [],
+    "cloudFunctions": [],
+    "databases": [],
+    "storage": []
+  },
+  "contextSync": {
+    "lastCheckpoint": null,
+    "lastStateUpdate": "2026-03-24T16:25:23.137130+00:00"
+  }
+}
