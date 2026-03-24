@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Recess | JLL Partners</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #1a1a1a;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 24px 40px;
+            background: linear-gradient(135deg, #f8fffe 0%, #eef9f6 100%);
+            border-bottom: 1px solid #e0f0eb;
+        }
+
+        .logos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .logos img {
+            height: 40px;
+        }
+
+        .logos .divider {
+            width: 1px;
+            height: 32px;
+            background: #ccc;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto 8px;
+        }
+
+        .trust-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #fff;
+            border: 1px solid #d4ece4;
+            border-radius: 24px;
+            padding: 8px 20px;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #2a7d5f;
+        }
+
+        .trust-badge svg {
+            width: 16px;
+            height: 16px;
+            fill: #2a7d5f;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 48px 24px;
+        }
+
+        .section {
+            margin-bottom: 48px;
+        }
+
+        .section h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #1a1a1a;
+        }
+
+        .section p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 16px;
+        }
+
+        .video-placeholder {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #f5f5f5;
+            border-radius: 12px;
+            border: 2px dashed #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .video-placeholder svg {
+            width: 48px;
+            height: 48px;
+            fill: #ccc;
+            margin-bottom: 8px;
+        }
+
+        .steps {
+            display: grid;
+            gap: 20px;
+        }
+
+        .step {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            padding: 20px;
+            background: #fafafa;
+            border-radius: 12px;
+            border: 1px solid #eee;
+        }
+
+        .step-number {
+            width: 36px;
+            height: 36px;
+            min-width: 36px;
+            background: #2bbaa0;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .step-content h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .step-content p {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 48px 24px;
+            background: #f8fffe;
+            border-top: 1px solid #e0f0eb;
+        }
+
+        .cta-section h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .cta-section p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 24px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: #2bbaa0;
+            color: white;
+            padding: 16px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .btn-primary:hover {
+            background: #24a08a;
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            background: white;
+            color: #2bbaa0;
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            border: 2px solid #2bbaa0;
+            margin-top: 12px;
+            transition: background 0.2s;
+        }
+
+        .btn-secondary:hover {
+            background: #f0faf7;
+        }
+
+        .brands {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 16px;
+        }
+
+        .brand-tag {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 20px;
+            padding: 6px 16px;
+            font-size: 13px;
+            color: #555;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 32px 24px;
+            color: #999;
+            font-size: 13px;
+        }
+
+        .footer a {
+            color: #2bbaa0;
+            text-decoration: none;
+        }
+
+        .how-it-works {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 16px;
+        }
+
+        .how-card {
+            text-align: center;
+            padding: 24px 16px;
+        }
+
+        .how-card .icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .how-card h3 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .how-card p {
+            font-size: 13px;
+            color: #777;
+            margin: 0;
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 24px; }
+            .how-it-works { grid-template-columns: 1fr; }
+            .logos { flex-direction: column; gap: 12px; }
+            .logos .divider { width: 32px; height: 1px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <div class="logos">
+            <svg height="40" viewBox="0 0 120 40" fill="none">
+                <text x="0" y="30" font-family="Arial" font-weight="bold" font-size="28" fill="#2bbaa0">recess</text>
+            </svg>
+            <div class="divider"></div>
+            <svg height="40" viewBox="0 0 60 40" fill="none">
+                <text x="0" y="30" font-family="Arial" font-weight="bold" font-size="28" fill="#e41d13">JLL</text>
+            </svg>
+        </div>
+        <h1>Welcome, JLL Partners</h1>
+        <p>Recess connects your properties with premium brands that want to reach your residents. Your properties get paid, your residents get free products, and you do nothing.</p>
+        <div class="trust-badge">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+            Trusted JLL partner since 2025
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="section">
+            <h2>How It Works</h2>
+            <div class="how-it-works">
+                <div class="how-card">
+                    <div class="icon">📦</div>
+                    <h3>Brands send products</h3>
+                    <p>Premium brands ship samples directly to your properties</p>
+                </div>
+                <div class="how-card">
+                    <div class="icon">🏠</div>
+                    <h3>Residents receive them</h3>
+                    <p>Your team distributes products to residents as a free amenity</p>
+                </div>
+                <div class="how-card">
+                    <div class="icon">💰</div>
+                    <h3>Your property gets paid</h3>
+                    <p>Recess pays your property for every campaign fulfilled</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Watch: Getting Started (2 min)</h2>
+            <div class="video-placeholder">
+                <div style="text-align: center;">
+                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    <div>Video coming soon</div>
+                </div>
+            </div>
+            <p style="font-size: 14px; color: #888;">A quick walkthrough of the signup and onboarding process.</p>
+        </div>
+
+        <div class="section">
+            <h2>Sign Up in 3 Steps</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Create your account</h3>
+                        <p>Register with your name, email, and property details. Takes about 30 seconds.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Add your properties</h3>
+                        <p>List the properties you manage with their address and resident count. This helps us match you with the right brand campaigns.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Start receiving offers</h3>
+                        <p>Brands will send you campaign offers. Accept the ones you want, decline the ones you don't. You're in full control.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Brands Already on Recess</h2>
+            <p>These brands are actively looking for properties like yours:</p>
+            <div class="brands">
+                <span class="brand-tag">Red Bull</span>
+                <span class="brand-tag">Kraft Heinz</span>
+                <span class="brand-tag">Ghost Energy</span>
+                <span class="brand-tag">Oreo</span>
+                <span class="brand-tag">Goodles</span>
+                <span class="brand-tag">La Colombe</span>
+                <span class="brand-tag">Starburst</span>
+                <span class="brand-tag">Essentia Water</span>
+                <span class="brand-tag">Dove</span>
+                <span class="brand-tag">Simple Mills</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="cta-section">
+        <h2>Ready to get started?</h2>
+        <p>Sign up takes 30 seconds. No cost, no commitment.</p>
+        <a href="https://app.recess.is/register" class="btn-primary">Create Your Account</a>
+        <br>
+        <a href="#" class="btn-secondary" id="guide-link">Download Setup Guide (PDF)</a>
+    </div>
+
+    <div class="footer">
+        <p>Questions? Email <a href="mailto:ian@recess.is">ian@recess.is</a> or call (209) 899-1575</p>
+        <p style="margin-top: 8px;">Recess is a brand activation platform connecting CPG brands with properties nationwide.</p>
+    </div>
+
+</body>
+</html>
